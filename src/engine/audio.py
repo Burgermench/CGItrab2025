@@ -15,9 +15,11 @@ def play_sound(name):
         sounds[name].play()
 
 def play_music(file_path):
-    if file_path in sounds:
-        pygame.mixer.music.load(sounds[file_path])
-        pygame.mixer.music.play()
+    try:
+        pygame.mixer.music.load(file_path)
+        pygame.mixer.music.play(-1)  # -1 means loop indefinitely
+    except Exception as e:
+        print(f"Error playing music: {e}")
         
 def play_note(note_name):
     # play notes dynamically like "A1", "C2", etc, check virtual piano online on the browser to understand where the inspiration for this comes from

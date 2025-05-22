@@ -1,5 +1,6 @@
 import pygame
 from config import LANE_KEYS, COMBO_MAX
+from engine.audio import play_sound
 
 class Player:
     def __init__(self):
@@ -25,6 +26,7 @@ class Player:
     def on_note_hit(self, instrument):
         self.score += 100 * (1 + self.combo // 10)
         self.combo += 1
+        play_sound(instrument)  # Play the instrument sound
         print(f"Hit! Instrument: {instrument}, Combo: {self.combo}, Score: {self.score}")
 
     def render(self):
