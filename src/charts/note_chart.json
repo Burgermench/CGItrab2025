@@ -1,0 +1,7 @@
+[
+    {"time": 1.0, "lane": 0, "instrument": "guitar"},
+    {"time": 1.5, "lane": 1, "instrument": "guitar"},
+    {"time": 2.0, "lane": 1, "instrument": "guitar"},
+    {"time": 2.3, "lane": 1, "instrument": "guitar"},
+    {"time": 3.0, "lane": 1, "instrument": "sax"}
+]

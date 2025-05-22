@@ -4,7 +4,7 @@ from engine.scene import GameScene
 pygame.init()
 screen = pygame.display.set_mode((1280, 720), pygame.DOUBLEBUF | pygame.OPENGL)
 pygame.display.set_caption("CG Hero: play 'em all")
-    
+
 clock = pygame.time.Clock()
 
 scene = GameScene(screen)
