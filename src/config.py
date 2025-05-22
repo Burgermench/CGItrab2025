@@ -4,7 +4,7 @@ NOTE_HIT_TOLERANCE = 0.25
 COMBO_MAX = 10
 LANE_KEYS = ["q", "w", "e", "r", "t", "y", "u", "i", "o"]
 INSTRUMENT_SOUNDS = {
-    "guitar": "assets/sounds/guitar.wav",
-    "sax": "assets/sounds/sax.wav",
-    "piano": "assets/sounds/piano.wav"
+    "guitar": "src/assets/sounds/sound_keyboard_staff_A_1.mp3",
+    "sax": "src/assets/sounds/sound_keyboard_staff_A_1.mp3",
+    "piano": "src/assets/sounds/sound_keyboard_staff_A_1.mp3"
 }

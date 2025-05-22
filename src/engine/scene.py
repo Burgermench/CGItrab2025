@@ -14,7 +14,7 @@ class GameScene:
         self.player = Player()
         self.effects = EffectManager()
         self.lanes = [NoteLane(i, key) for i, key in enumerate(self.player.keymap)]
-        self.chart = load_chart("charts/notechart.json")
+        self.chart = load_chart("src/charts/notechart.json")
         self.chart_index = 0
         self.song_started = False
         self.song_start_time = 0
@@ -22,7 +22,7 @@ class GameScene:
     def update(self, dt):
         # start music when game starts
         if not self.song_started:
-            play_music("assets/sounds/song.mp3")
+            play_music("src/assets/sounds/sound_keyboard_staff_A_1.mp3")
             self.song_start_time = pygame.time.get_ticks()
             self.song_started = True
             

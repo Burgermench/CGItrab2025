@@ -12,8 +12,14 @@ class Player:
         keys = pygame.key.get_pressed()
         self.combo_ready = self.combo >= COMBO_MAX and keys[pygame.K_SPACE]
 
-    def is_key_down(self, index):
-        key = self.keymap[index]
+    def is_key_down(self, instrument):
+        # Map instruments to their corresponding keys
+        instrument_keys = {
+            "piano": "q",
+            "guitar": "w",
+            "sax": "e"
+        }
+        key = instrument_keys.get(instrument, "q")  # Default to 'q' if instrument not found
         return pygame.key.get_pressed()[getattr(pygame, f"K_{key}")]
 
     def on_note_hit(self, instrument):

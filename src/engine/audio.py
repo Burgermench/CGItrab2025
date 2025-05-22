@@ -7,7 +7,7 @@ pygame.mixer.init()
 # load all instrument sfx files
 sounds = {k: pygame.mixer.Sound(v) for k, v in INSTRUMENT_SOUNDS.items()}
 
-note_cach = {}
+note_cache = {}
 supported_formats = {".wav", ".mp3"}
 
 def play_sound(name):
@@ -23,4 +23,4 @@ def play_note(note_name):
     # play notes dynamically like "A1", "C2", etc, check virtual piano online on the browser to understand where the inspiration for this comes from
     # we look for files inside assets/sounds/notes
     if note_name in note_cache:
-        note_cache[note_name].
+        note_cache[note_name].play()
