@@ -16,9 +16,16 @@ class NoteLane:
     def update(self, dt, player):
         for note in self.notes:
             note.update(dt)
+        #check for hits
         hit_notes = [n for n in self.notes if n.check_hit(player)]
         for n in hit_notes:
             self.notes.remove(n)
+        #check for wrong key presses when NO notes are hitable
+        if not hit_notes and player.is_key_down(self.index):
+            from engine.audio import play_wrong_sound
+            play_wrong_sound()
+            player.on_miss()
+            
     
     def render(self):
         x = (self.index - 4) * (LANE_WIDTH * 2)         # spread lanes from center

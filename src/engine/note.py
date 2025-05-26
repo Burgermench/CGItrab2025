@@ -9,8 +9,10 @@ class Note:
         self.instrument = instrument
         self.hit = False
 
+
     def update(self, dt):
         self.y -= NOTE_SPEED * dt
+
 
     def check_hit(self, player):
         if self.hit:
@@ -20,6 +22,7 @@ class Note:
             self.hit = True
             return True
         return False
+
 
     def render(self, x):
         if self.hit: return
